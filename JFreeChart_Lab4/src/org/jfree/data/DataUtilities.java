@@ -51,6 +51,9 @@ package org.jfree.data;
 import java.util.Arrays;
 import org.jfree.chart.util.ParamChecks;
 import org.jfree.data.general.DatasetUtilities;
+import java.util.List;
+
+import java.security.InvalidParameterException;
 
 /**
  * Utility methods for use with some of the data classes (but not the datasets,
@@ -260,23 +263,39 @@ public abstract class DataUtilities {
      */
     public static KeyedValues getCumulativePercentages(KeyedValues data) {
         ParamChecks.nullNotPermitted(data, "data");
-        DefaultKeyedValues result = new DefaultKeyedValues();
-        double total = 0.0;
-        for (int i = 0; i < data.getItemCount(); i++) {
-            Number v = data.getValue(i);
-            if (v != null) {
-                total = total + v.doubleValue();
-            }
+        if(data == null) {
+            throw new InvalidParameterException("data cannot be null!");
         }
-        double runningTotal = 0.0;
-        for (int i = 0; i < data.getItemCount(); i++) {
-            Number v = data.getValue(i);
-            if (v != null) {
-                runningTotal = runningTotal + v.doubleValue();
-            }
-            result.addValue(data.getKey(i), new Double(runningTotal / total));
+
+        if(data.getItemCount() < 1) {
+            throw new InvalidParameterException("Invalid data item count: " + data.getItemCount());
         }
-        return result;
+
+        try {
+          DefaultKeyedValues result = new DefaultKeyedValues();
+          double total = 0.0;
+          List keys = data.getKeys();
+          for (int i = 0; i < data.getItemCount(); i++) {
+              Number v = data.getValue((int) keys.get(i));
+              if (v == null) {
+                total += 0;
+                continue;
+              }
+              total = total + v.doubleValue();
+          }
+          double runningTotal = 0.0;
+          for (int i = 0; i < data.getItemCount(); i++) {
+              Number v = data.getValue((int) keys.get(i));
+              if (v == null) {
+                v = 0.0;
+              }
+              runningTotal = runningTotal + v.doubleValue();
+              result.addValue(data.getKey(i), new Double(runningTotal / total));
+          }
+          return result;
+        } catch (Exception e) {
+          throw new InvalidParameterException("Error when accessing data");
+        }
     }
 
 }

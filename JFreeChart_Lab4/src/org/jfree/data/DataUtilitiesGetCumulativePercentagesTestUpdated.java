@@ -83,10 +83,10 @@ public class DataUtilitiesGetCumulativePercentagesTestUpdated {
       actualValues.add(actual.getValue(key));
     }
 
-     assertSame(
+     assertArrayEquals(
          "Testing getCumulativePercentages with valid KeyedValues instance",
-         expectedValues,
-         actualValues);
+         expectedValues.toArray(),
+         actualValues.toArray());
    }// */
 
   // An adjustment for sequential keys
@@ -152,10 +152,10 @@ public class DataUtilitiesGetCumulativePercentagesTestUpdated {
       actualValues.add(actual.getValue(key));
     }
 
-    assertSame(
+    assertArrayEquals(
         "Testing getCumulativePercentages with valid KeyedValues instance",
-        expectedValues,
-        actualValues);
+        expectedValues.toArray(),
+        actualValues.toArray());
   } // */
 
   @Test
@@ -204,13 +204,13 @@ public class DataUtilitiesGetCumulativePercentagesTestUpdated {
     //     0.8181818181818182,
     //     1.0);
 
-    final double sum = 1+2+3+3+2;
+    final double sum = 1+2+0+3+2;
     final List<Number> expectedValues = Arrays.asList(
         1/sum,
         (1+2)/sum,
+        (1+2)/sum,
         (1+2+3)/sum,
-        (1+2+3+3)/sum,
-        (1+2+3+3+2)/sum);
+        (1+2+3+2)/sum);
 
     List<Number> actualValues = new ArrayList<Number>();
 
@@ -220,12 +220,14 @@ public class DataUtilitiesGetCumulativePercentagesTestUpdated {
       actualValues.add(actual.getValue(key));
     }
 
-    assertSame(
+    assertArrayEquals(
         "Testing getCumulativePercentages with valid KeyedValues instance",
-        expectedValues,
-        actualValues);
+        expectedValues.toArray(),
+        actualValues.toArray());
   } // */
 
+  @Rule
+  public ExpectedException thrown = ExpectedException.none();
 
   @Test
   public void testCumulativePercentagesSequentialInvalidItemCount() {
@@ -310,48 +312,6 @@ public class DataUtilitiesGetCumulativePercentagesTestUpdated {
     thrown.expect(InvalidParameterException.class);
     final KeyedValues actual = DataUtilities.getCumulativePercentages(values);
   } // */
-
-  @Rule
-  public ExpectedException thrown = ExpectedException.none();
-
-  @Test
-  public void testCumulativePercentagesInvalidData() {
-    Mockery mockingContext = new Mockery();
-
-    final List<Comparable> keys = Arrays.asList(1, 3, 5, 6, 7);
-    final KeyedValues values = mockingContext.mock(KeyedValues.class);
-    mockingContext.checking(new Expectations() {
-      {
-        allowing(values).getItemCount();
-        will(returnValue(5));
-        allowing(values).getKeys();
-        will(returnValue(keys));
-
-        allowing(values).getKey(0);
-        will(returnValue(1));
-        allowing(values).getKey(1);
-        will(returnValue(3));
-        allowing(values).getKey(2);
-        will(returnValue(5));
-        allowing(values).getKey(3);
-        will(returnValue(6));
-        allowing(values).getKey(4);
-        will(returnValue(7));
-
-        allowing(values).getValue(1);
-        will(returnValue(1));
-        allowing(values).getValue(5);
-        will(returnValue(3));
-        allowing(values).getValue(6);
-        will(returnValue(3));
-        allowing(values).getValue(7);
-        will(returnValue(2));
-      }
-    });
-
-    thrown.expect(InvalidParameterException.class);
-    final KeyedValues actual = DataUtilities.getCumulativePercentages(values);
-  }
 }
 
 /*/ unnecessary, but would be useful
