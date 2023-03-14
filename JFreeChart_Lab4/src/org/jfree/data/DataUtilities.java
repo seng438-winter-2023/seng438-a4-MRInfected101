@@ -245,7 +245,10 @@ public abstract class DataUtilities {
      * @return An array of <code>Double</code>.
      */
     public static Number[][] createNumberArray2D(double[][] data) {
-        ParamChecks.nullNotPermitted(data, "data");
+        if(data == null) {
+            throw new InvalidParameterException("data cannot be null!");
+        }
+
         int l1 = data.length;
         Number[][] result = new Number[l1][];
         for (int i = 0; i < l1; i++) {
