@@ -262,20 +262,17 @@ public abstract class DataUtilities {
      * @return The cumulative percentages.
      */
     public static KeyedValues getCumulativePercentages(KeyedValues data) {
-        ParamChecks.nullNotPermitted(data, "data");
         if(data == null) {
             throw new InvalidParameterException("data cannot be null!");
         }
 
-        if(data.getItemCount() < 1) {
-            throw new InvalidParameterException("Invalid data item count: " + data.getItemCount());
-        }
+        int itemCount = data.getItemCount();
 
         try {
           DefaultKeyedValues result = new DefaultKeyedValues();
           double total = 0.0;
           List keys = data.getKeys();
-          for (int i = 0; i < data.getItemCount(); i++) {
+          for (int i = 0; i < itemCount; i++) {
               Number v = data.getValue((int) keys.get(i));
               if (v == null) {
                 total += 0;
@@ -284,7 +281,7 @@ public abstract class DataUtilities {
               total = total + v.doubleValue();
           }
           double runningTotal = 0.0;
-          for (int i = 0; i < data.getItemCount(); i++) {
+          for (int i = 0; i < itemCount; i++) {
               Number v = data.getValue((int) keys.get(i));
               if (v == null) {
                 v = 0.0;
@@ -294,7 +291,7 @@ public abstract class DataUtilities {
           }
           return result;
         } catch (Exception e) {
-          throw new InvalidParameterException("Error when accessing data");
+            throw new InvalidParameterException("Error when accessing data");
         }
     }
 
