@@ -225,7 +225,10 @@ public abstract class DataUtilities {
      * @return An array of <code>Double</code>.
      */
     public static Number[] createNumberArray(double[] data) {
-        ParamChecks.nullNotPermitted(data, "data");
+        if(data == null) {
+            throw new InvalidParameterException("data cannot be null!");
+        }
+
         Number[] result = new Number[data.length];
         for (int i = 0; i < data.length; i++) {
             result[i] = new Double(data[i]);
