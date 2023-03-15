@@ -129,7 +129,7 @@ public abstract class DataUtilities {
 		double total = 0.0;
 		int rowCount = data.getRowCount();
 		
-		if(rowCount < 1) {
+		if(rowCount < 0) {
 			throw new InvalidParameterException();
 		}
 
@@ -185,16 +185,28 @@ public abstract class DataUtilities {
 	 * @return The total of the values in the specified row.
 	 */
 	public static double calculateRowTotal(Values2D data, int row) {
-		ParamChecks.nullNotPermitted(data, "data");
-		double total = 0.0;
-		int columnCount = data.getColumnCount();
-		for (int c = 0; c < columnCount; c++) {
-			Number n = data.getValue(row, c);
-			if (n != null) {
-				total += n.doubleValue();
-			}
-		}
-		return total;
+    if(data == null) {
+      throw new InvalidParameterException("data cannot be null");
+    }
+
+    double total = 0.0;
+    int columnCount = data.getColumnCount();
+
+    if(columnCount < 0 ) {
+      throw new InvalidParameterException("row indices start at 0");
+    }
+
+    try {
+      for (int c = 0; c < columnCount; c++) {
+        Number n = data.getValue(row, c);
+        if (n != null) {
+          total += n.doubleValue();
+        }
+      }
+      return total;
+    } catch(Exception e) {
+      throw new InvalidParameterException("cannot access data");
+    }
 	}
 
 	/**
@@ -210,19 +222,31 @@ public abstract class DataUtilities {
 	 * @since 1.0.13
 	 */
 	public static double calculateRowTotal(Values2D data, int row, int[] validCols) {
-		ParamChecks.nullNotPermitted(data, "data");
+    if(data == null) {
+      throw new InvalidParameterException("data cannot be null");
+    }
+
 		double total = 0.0;
 		int colCount = data.getColumnCount();
-		for (int v = 0; v < validCols.length; v++) {
-			int col = validCols[v];
-			if (col < colCount) {
-				Number n = data.getValue(row, col);
-				if (n != null) {
-					total += n.doubleValue();
-				}
-			}
-		}
-		return total;
+
+    if(colCount < 0 ) {
+      throw new InvalidParameterException("row indices start at 0");
+    }
+
+    try {
+      for (int v = 0; v < validCols.length; v++) {
+        int col = validCols[v];
+        if (col < colCount) {
+          Number n = data.getValue(row, col);
+          if (n != null) {
+            total += n.doubleValue();
+          }
+        }
+      }
+      return total;
+    } catch(Exception e) {
+      throw new InvalidParameterException("Error accessing data");
+    }
 	}
 
     /**

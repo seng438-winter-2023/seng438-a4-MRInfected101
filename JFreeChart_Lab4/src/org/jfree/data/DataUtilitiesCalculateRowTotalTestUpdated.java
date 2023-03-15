@@ -75,6 +75,8 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
+        one(values).getValue(0,2);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -96,6 +98,8 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
+        one(values).getValue(0,-1);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -117,6 +121,8 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(null));
+        one(values).getValue(0,-1);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -138,6 +144,8 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
+        one(values).getValue(10,0);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -160,6 +168,10 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
+        one(values).getValue(10,0);
+        will(throwException(new IndexOutOfBoundsException()));
+        one(values).getValue(0,2);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
     thrown.expect(InvalidParameterException.class);
@@ -171,7 +183,7 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
   @Test
   public void testRowTotalValidInputsValidColumns() {
     Mockery mockingContext = new Mockery();
-    int[] validColumns = {0};
+    int[] validColumns = {0, 1};
 
     final Values2D values = mockingContext.mock(Values2D.class);
     mockingContext.checking(new Expectations() {
@@ -196,7 +208,7 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
   @Test
   public void testRowTotalValidInputsWithNullValidColumns() {
     Mockery mockingContext = new Mockery();
-    int[] validColumns = {0};
+    int[] validColumns = {0, 1};
 
     final Values2D values = mockingContext.mock(Values2D.class);
     mockingContext.checking(new Expectations() {
@@ -221,7 +233,7 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
   @Test
   public void testRowTotalInvalidValues2DValidColumns() {
     Mockery mockingContext = new Mockery();
-    int[] validColumns = {0};
+    int[] validColumns = {0, 1, 2, 3, 4, 5, 6, 7, 8};
 
     final Values2D values = mockingContext.mock(Values2D.class);
     mockingContext.checking(new Expectations() {
@@ -232,6 +244,8 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
+        one(values).getValue(0,2);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -254,6 +268,8 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
+        one(values).getValue(0,-1);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -276,6 +292,8 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(null));
+        one(values).getValue(0,-1);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -298,6 +316,8 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
+        one(values).getValue(10,0);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -321,6 +341,10 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
+        one(values).getValue(10,0);
+        will(throwException(new IndexOutOfBoundsException()));
+        one(values).getValue(0,2);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
     thrown.expect(InvalidParameterException.class);
