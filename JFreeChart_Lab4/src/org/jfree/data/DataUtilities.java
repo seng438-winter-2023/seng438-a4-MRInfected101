@@ -161,19 +161,30 @@ public abstract class DataUtilities {
 	 * @since 1.0.13
 	 */
 	public static double calculateColumnTotal(Values2D data, int column, int[] validRows) {
-		ParamChecks.nullNotPermitted(data, "data");
+    if(data == null) {
+      throw new InvalidParameterException("data cannot be null");
+    }
 		double total = 0.0;
 		int rowCount = data.getRowCount();
-		for (int v = 0; v < validRows.length; v++) {
-			int row = validRows[v];
-			if (row < rowCount) {
-				Number n = data.getValue(row, column);
-				if (n != null) {
-					total += n.doubleValue();
-				}
-			}
-		}
-		return total;
+
+    if(rowCount < 0) {
+      throw new InvalidParameterException("data has invalid row count");
+    }
+
+    try {
+      for (int v = 0; v < validRows.length; v++) {
+        int row = validRows[v];
+        if (row < rowCount) {
+          Number n = data.getValue(row, column);
+          if (n != null) {
+            total += n.doubleValue();
+          }
+        }
+      }
+      return total;
+    } catch(Exception e) {
+      throw new InvalidParameterException("data cannot be accessed");
+    }
 	}
 
 	/**
