@@ -14,7 +14,7 @@
 
 # Analysis of 10 Mutants of the Range class 
 
-![Mutation coverage of Range before](Mutation_Range_before.png)
+![Mutation coverage of Range before](media/Mutation_Range_before.png)
 
 # Report all the statistics and the mutation score for each test class
 
