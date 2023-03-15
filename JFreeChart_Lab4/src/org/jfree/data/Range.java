@@ -87,6 +87,14 @@ public strictfp class Range implements Serializable {
      * @param upper  the upper bound (must be &gt;= lower bound).
      */
     public Range(double lower, double upper) {
+    	/*if(Double.isNaN(upper) || Double.isNaN(lower)) {
+    		String msg = "Range(double, double): require valid numbers as arguments).";
+            throw new IllegalArgumentException(msg);
+    	}
+    	if(upper == Double.POSITIVE_INFINITY || lower == Double.NEGATIVE_INFINITY) {
+    		String msg = "Range(double, double): require valid numbers as arguments).";
+            throw new IllegalArgumentException(msg);
+    	}*/
         if (lower > upper) {
             String msg = "Range(double, double): require lower (" + lower
                 + ") <= upper (" + upper + ").";
@@ -154,11 +162,15 @@ public strictfp class Range implements Serializable {
      * @return A boolean.
      */
     public boolean intersects(double b0, double b1) {
+    	if(Double.isNaN(b0) || Double.isNaN(b1)) {
+    		String msg = "intersects() cannot accept null ranges.";
+            throw new IllegalArgumentException(msg);
+    	}
         if (b0 <= this.lower) {
-            return (b1 > this.lower);
+            return (b1 >= this.lower);
         }
         else {
-            return (b0 < this.upper && b1 >= b0);
+            return (b0 <= this.upper && b1 >= b0);
         }
     }
 
@@ -173,6 +185,9 @@ public strictfp class Range implements Serializable {
      * @since 1.0.9
      */
     public boolean intersects(Range range) {
+    	if(range == null) {
+    		throw new IllegalArgumentException("null not permitted");
+    	}
         return intersects(range.getLowerBound(), range.getUpperBound());
     }
 
