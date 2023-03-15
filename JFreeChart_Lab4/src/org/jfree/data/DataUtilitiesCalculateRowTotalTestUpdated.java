@@ -179,6 +179,15 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
     DataUtilities.calculateRowTotal(values, 10);
   }
 
+  @Test
+  public void testRowTotalNullInput() {
+    int[] validColumns = {0};
+    final Values2D values = null;
+
+    thrown.expect(InvalidParameterException.class);
+    DataUtilities.calculateRowTotal(values, 10, validColumns);
+  }
+
   /* Testing the overridden method */
   @Test
   public void testRowTotalValidInputsValidColumns() {
@@ -349,6 +358,15 @@ public class DataUtilitiesCalculateRowTotalTestUpdated {
     });
     thrown.expect(InvalidParameterException.class);
 
+    DataUtilities.calculateRowTotal(values, 10, validColumns);
+  }
+
+  @Test
+  public void testRowTotalNullInputValidColumns() {
+    int[] validColumns = {0};
+    final Values2D values = null;
+
+    thrown.expect(InvalidParameterException.class);
     DataUtilities.calculateRowTotal(values, 10, validColumns);
   }
 }
