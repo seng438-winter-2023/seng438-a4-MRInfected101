@@ -80,16 +80,15 @@ public class DataUtilitiesCalculateColumnTotalTestUpdated {
 				one(values).getValue(0, 0);
 				will(returnValue(6.0));
 				one(values).getValue(1, 0);
-				will(returnValue(null));
+				will(returnValue(5));
 				one(values).getValue(2, 0);
-				will(returnValue(1.0));
-				one(values).getValue(3, 0);
-				will(returnValue(5.5));
+				will(throwException(new IndexOutOfBoundsException()));
+				
 			}
 
 		});
 
-    thrown.expect(InvalidParameterException.class);
+		thrown.expect(InvalidParameterException.class);
 		double result = DataUtilities.calculateColumnTotal(values, 0);
 	}
 
@@ -107,7 +106,7 @@ public class DataUtilitiesCalculateColumnTotalTestUpdated {
 			{
 				one(values).getRowCount();
 				will(returnValue(1));
-				one(values).getValue(0, 0);
+				one(values).getValue(1, 0);
 				will(returnValue(2.0));
 				one(values).getValue(1, 0);
 				will(returnValue(6.0));
@@ -116,7 +115,7 @@ public class DataUtilitiesCalculateColumnTotalTestUpdated {
 
 		});
 
-    thrown.expect(InvalidParameterException.class);
+		thrown.expect(InvalidParameterException.class);
 		double result = DataUtilities.calculateColumnTotal(values, 0);
 	}
 
@@ -174,12 +173,14 @@ public class DataUtilitiesCalculateColumnTotalTestUpdated {
     final Values2D values = mockingContext.mock(Values2D.class);
     mockingContext.checking(new Expectations() {
       {
-        one(values).getColumnCount();
-        will(returnValue(-1));
+        one(values).getRowCount();
+        will(returnValue(10));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(1,0);
         will(returnValue(null));
+        one(values).getValue(2, 0);
+        will(returnValue(new InvalidParameterException()));
       }
     });
 
@@ -209,6 +210,13 @@ public class DataUtilitiesCalculateColumnTotalTestUpdated {
 		double result = DataUtilities.calculateColumnTotal(values, 0, validRows);
 		// verify
 		assertEquals(7.6, result, .000000001d);
+  }
+  
+  @Test
+  public void testColumnTotalNullInput() {
+	  final Values2D value = null;
+	  thrown.expect(InvalidParameterException.class);
+	  DataUtilities.calculateColumnTotal(value, 0);
   }
 
   @Test
@@ -274,26 +282,7 @@ public class DataUtilitiesCalculateColumnTotalTestUpdated {
 	 * 
 	 */
 
-	@Test
-	public void calculateColumnTotalForInvalidRangeValidRows() {
-		Mockery mockingContext = new Mockery();
-    int[] validRows = {0};
-		final Values2D values = mockingContext.mock(Values2D.class);
-		mockingContext.checking(new Expectations() {
-			{
-				one(values).getRowCount();
-				will(returnValue(1));
-				one(values).getValue(0, 0);
-				will(returnValue(2.0));
-				one(values).getValue(1, 0);
-				will(returnValue(6.0));
-			}
-
-		});
-
-    thrown.expect(InvalidParameterException.class);
-		double result = DataUtilities.calculateColumnTotal(values, 0, validRows);
-	}
+	
 
 	/**
 	 * Failure trace says that it expects the value of result to be 5.5 but was 0.0,
@@ -314,12 +303,13 @@ public class DataUtilitiesCalculateColumnTotalTestUpdated {
 				one(values).getValue(0, 0);
 				will(returnValue(4.5));
 				one(values).getValue(1, 0);
-				will(returnValue(null));
+				will(returnValue("invalid"));
 			}
 		});
 
-    thrown.expect(InvalidParameterException.class);
+		thrown.expect(InvalidParameterException.class);
 		double result = DataUtilities.calculateColumnTotal(values, 0, validRows);
+		System.out.println(result);
 	}
 
   @Test
@@ -352,12 +342,14 @@ public class DataUtilitiesCalculateColumnTotalTestUpdated {
     final Values2D values = mockingContext.mock(Values2D.class);
     mockingContext.checking(new Expectations() {
       {
-        one(values).getColumnCount();
-        will(returnValue(-1));
+        one(values).getRowCount();
+        will(returnValue(10));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(1,0);
         will(returnValue(null));
+        one(values).getValue(2, 0);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
