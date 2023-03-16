@@ -33,6 +33,7 @@
 # how did you test each functionaity with different test data
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+Selenium is far more user friendly and can be easily set up and ran with little background knowledge whereas Sikulix is more complex and requires some prior knowledge of how to run the program before it can be used. However, selenium is only useful for testing web applications as it's integrated with the web browser. Sikulix on the other hand is downloaded to a device and can be used to test GUI not accesible on a web browser. Sikulix relies on image recognition and requires images to be stored in order to match ith what's visible on screen whereas selenium uses HTML locators to automate it's tests making it more conducive to regression testing.
 
 # How the team work/effort was divided and managed
 
