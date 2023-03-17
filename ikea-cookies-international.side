@@ -1,0 +1,485 @@
+{
+  "id": "acb0cb0e-682f-4c65-9ffa-29f10044355a",
+  "version": "2.0",
+  "name": "ikea-cookies-international",
+  "url": "https://www.ikea.com",
+  "tests": [{
+    "id": "d439f330-e3b8-4d97-8649-8aa0c2da5035",
+    "name": "Ikea-change-cookies-withdrawal",
+    "commands": [{
+      "id": "0c86d847-109c-4119-9cc9-421b51206f1a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1052c4d7-519f-419e-9b69-e8cf9e76116a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1888x1031",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86ade32d-c529-4783-83f8-e924337d7550",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svelte-p6b4nf:nth-child(2)",
+      "targets": [
+        ["css=.svelte-p6b4nf:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div/div/button/span/span/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25344ea7-1ca6-41e2-8bda-3809856d2706",
+      "comment": "",
+      "command": "click",
+      "target": "css=.footer-end-copy__button",
+      "targets": [
+        ["css=.footer-end-copy__button", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cookie information')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "541bba32-c9a1-40b3-8bab-e624b7903c2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-wrap:nth-child(5) > .svelte-1y0w7w5",
+      "targets": [
+        ["css=.btn-wrap:nth-child(5) > .svelte-1y0w7w5", "css:finder"],
+        ["xpath=//div[@id='mountId']/div[3]/article/div[2]/button", "xpath:idRelative"],
+        ["xpath=//article/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Withdraw your consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5ba95518-b33f-4af8-a525-3f851cfac7bd",
+    "name": "Ikea-change-cookies-allowall",
+    "commands": [{
+      "id": "37cec1b7-997f-4ebf-8c9a-eaa4fd11030b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80c51768-495a-4243-9d9d-b523af06b58f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1888x1031",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aeede2b2-72b8-473d-ae25-fd72c379a4aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svelte-p6b4nf > .menu-btn",
+      "targets": [
+        ["css=.svelte-p6b4nf > .menu-btn", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2868f3b5-4179-48ff-9f1c-fa3840bb078a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.footer-end-copy__button",
+      "targets": [
+        ["css=.footer-end-copy__button", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cookie information')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed489ef5-b540-4aeb-ae2b-5f75e5f19dfd",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.in-menu .website-link",
+      "targets": [
+        ["css=.in-menu .website-link", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/?ref=gwp-start')]", "xpath:href"],
+        ["xpath=//div/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a1003cd-fe13-4779-a8f5-d41a92e863db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-wrap:nth-child(4) > .svelte-1y0w7w5",
+      "targets": [
+        ["css=.btn-wrap:nth-child(4) > .svelte-1y0w7w5", "css:finder"],
+        ["xpath=//div[@id='mountId']/div[3]/article/div/button", "xpath:idRelative"],
+        ["xpath=//article/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Change your consent')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7e53780-d08f-4c7b-9902-751358febb3c",
+      "comment": "",
+      "command": "click",
+      "target": "id=accept-recommended-btn-handler",
+      "targets": [
+        ["id=accept-recommended-btn-handler", "id"],
+        ["css=#accept-recommended-btn-handler", "css:finder"],
+        ["xpath=//button[@id='accept-recommended-btn-handler']", "xpath:attributes"],
+        ["xpath=//div[@id='ot-pc-content']/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Allow all cookies')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4f63830-4494-40b3-b10a-6c8836ada710",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=accept-recommended-btn-handler",
+      "targets": [
+        ["id=accept-recommended-btn-handler", "id"],
+        ["css=#accept-recommended-btn-handler", "css:finder"],
+        ["xpath=//button[@id='accept-recommended-btn-handler']", "xpath:attributes"],
+        ["xpath=//div[@id='ot-pc-content']/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Allow all cookies')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4802561-6c06-45ac-86c6-001233b7b0ba",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=accept-recommended-btn-handler",
+      "targets": [
+        ["id=accept-recommended-btn-handler", "id"],
+        ["css=#accept-recommended-btn-handler", "css:finder"],
+        ["xpath=//button[@id='accept-recommended-btn-handler']", "xpath:attributes"],
+        ["xpath=//div[@id='ot-pc-content']/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Allow all cookies')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "72d7e42b-ce76-47a9-b469-0e1b8d4d30cb",
+    "name": "ikea-goto-us",
+    "commands": [{
+      "id": "3b0ab702-0dcd-4f63-939b-e40c92b543fe",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6180552f-ceb3-4a53-8ab1-f2045f45e920",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1888x1031",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1dddcac3-a7f4-472d-8553-d8b1b56ec685",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.icon-container > .svelte-p6b4nf",
+      "targets": [
+        ["css=.icon-container > .svelte-p6b4nf", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open main menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d69f77f-6918-4a00-8101-92a5c78b4614",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-container > .svelte-p6b4nf",
+      "targets": [
+        ["css=.icon-container > .svelte-p6b4nf", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open main menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a2561fe-2189-436e-ba20-3dcc60b61320",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.icon-container > .svelte-p6b4nf",
+      "targets": [
+        ["css=.icon-container > .svelte-p6b4nf", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open main menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "316e3245-1cb4-4827-81df-4e43287d1094",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu-content .site",
+      "targets": [
+        ["css=.menu-content .site", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/button/span/span/span", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div/div/button/span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33a57c42-7281-40ec-ab33-965d07d1c7dc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.menu-content .site",
+      "targets": [
+        ["css=.menu-content .site", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/button/span/span/span", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div/div/button/span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89436a64-910c-4561-b297-a6f13a66863e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.open .site",
+      "targets": [
+        ["css=.open .site", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/button/span/span/span", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div/div/button/span/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3c1091b-1df8-41f0-a41b-d3696bb589f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.focus-visible",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "453559cf-e651-4190-9057-4ccd2758b201",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.focus-visible",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d39cfaa-8b85-467c-b39d-975d1de62a65",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.focus-visible",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b370809-641f-4db5-9633-d1201097826b",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(3) > .option",
+      "targets": [
+        ["css=li:nth-child(3) > .option", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/div/div/ul/li[3]/button", "xpath:idRelative"],
+        ["xpath=//li[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21da0fa9-af42-42cc-923b-21c8f4a1b476",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svelte-1nm01kv > .menu-btn",
+      "targets": [
+        ["css=.svelte-1nm01kv > .menu-btn", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c89ed67f-7656-4d22-a108-95f500c54358",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,604)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d7a310e8-9f11-4fa8-879a-99ae265f98e6",
+    "name": "ikea-goto-canada-en",
+    "commands": [{
+      "id": "eb3c2438-4fdd-40e2-961d-168b664a8241",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac65d8d5-4fbf-4f51-9bd5-7f1679af58c4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1888x1031",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "229c8dad-f3b6-4dde-b6f5-0c943aa7df3f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.icon-container > .svelte-p6b4nf",
+      "targets": [
+        ["css=.icon-container > .svelte-p6b4nf", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open main menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0cf5771-9901-4990-87b6-9d00cd8a4ae8",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.icon-container > .svelte-p6b4nf",
+      "targets": [
+        ["css=.icon-container > .svelte-p6b4nf", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open main menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c9fc1db-23cd-41dc-9d6b-1712168ecd84",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-container > .svelte-p6b4nf",
+      "targets": [
+        ["css=.icon-container > .svelte-p6b4nf", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open main menu')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "933d86a7-c40d-42d5-9ded-706aa2246dac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu-content .selected path",
+      "targets": [
+        ["css=.menu-content .selected path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fcf95dd-dece-40e5-8925-14d23cbb771a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.menu-content .selected path",
+      "targets": [
+        ["css=.menu-content .selected path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "773de8e7-9851-4612-92b7-6cbb0cc684b8",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.down > path",
+      "targets": [
+        ["css=.down > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "78c569bf-6129-4e71-b662-0f34da74bbae",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .option",
+      "targets": [
+        ["css=li:nth-child(2) > .option", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/div/div/ul/li[2]/button", "xpath:idRelative"],
+        ["xpath=//li[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f8d59017-110c-4085-90ab-fdbedb821444",
+    "name": "ikea-goto-canada-fr",
+    "commands": [{
+      "id": "fb8cceeb-8b7b-4c80-b037-0ccb55e0c2c3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dfd774c0-270c-4f7d-ac4d-6c4632fedcd1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1888x1031",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64c3b31e-71ed-436e-a056-4deeeaa06877",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svelte-p6b4nf:nth-child(2)",
+      "targets": [
+        ["css=.svelte-p6b4nf:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div/div/button/span/span/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0af40dbe-e88e-429e-81aa-aac25d481bc0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menu-content .selected path",
+      "targets": [
+        ["css=.menu-content .selected path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8115bd54-aa26-4d7e-91dc-0f09c32bb684",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.menu-content .selected path",
+      "targets": [
+        ["css=.menu-content .selected path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "716bfe05-fac2-4b40-856d-309a126c0db5",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.down > path",
+      "targets": [
+        ["css=.down > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4ea3209-d3a9-419c-8a6b-fdc5a4699d95",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .option",
+      "targets": [
+        ["css=li:nth-child(2) > .option", "css:finder"],
+        ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/div/div/ul/li[2]/button", "xpath:idRelative"],
+        ["xpath=//li[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "36324165-a69a-4994-9df0-10c3b00c7d59",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d439f330-e3b8-4d97-8649-8aa0c2da5035"]
+  }],
+  "urls": ["https://www.ikea.com/"],
+  "plugins": []
+}
