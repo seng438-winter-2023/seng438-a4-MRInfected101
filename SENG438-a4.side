@@ -7,21 +7,54 @@
     "id": "e205e86d-edcb-44c7-b6bc-cb02785cd1e7",
     "name": "providingValidPostalCode",
     "commands": [{
-      "id": "60ced6ec-4ff0-4167-bc67-9d902bdf87fd",
+      "id": "2d5d583f-28de-4e3c-883f-e0dd6ea818f2",
       "comment": "",
       "command": "open",
-      "target": "/ca/en/",
+      "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "4e4e3ea5-ccfe-44d0-b6da-e632c2bd9cec",
+      "id": "34f7b818-97b2-41a2-b3db-aee233db57bc",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1920x1016",
+      "target": "1412x964",
       "targets": [],
       "value": ""
     }, {
-      "id": "3b7abf1b-83f9-4967-8075-3a2e8acd26f7",
+      "id": "65f35b7f-cdca-4c02-ae7f-27cd4bd84720",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hero .go-shopping",
+      "targets": [
+        ["css=.hero .go-shopping", "css:finder"],
+        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div[2]/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//section/div[2]/div/div/a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef35171a-2cd7-41d7-b48b-2b40ca7111bc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.personalised_hej_fragment--card__info",
+      "targets": [
+        ["css=.personalised_hej_fragment--card__info", "css:finder"],
+        ["xpath=//a[@id='personalised_hej_fragment--campaign-card-link']/div[2]", "xpath:idRelative"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05c98bb4-57eb-450e-bfa6-cfeb825344d9",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.personalised_hej_fragment--card__info",
+      "targets": [
+        ["css=.personalised_hej_fragment--card__info", "css:finder"],
+        ["xpath=//a[@id='personalised_hej_fragment--campaign-card-link']/div[2]", "xpath:idRelative"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4a31e90-49ac-4a39-9e41-b9cbbec62511",
       "comment": "",
       "command": "click",
       "target": "css=.hnf-location__btn-wrapper--postalcode > .hnf-btn--small .hnf-btn__label",
@@ -32,17 +65,53 @@
       ],
       "value": ""
     }, {
-      "id": "52bba4ee-6c7c-41c7-ad89-386e4a77a6fb",
+      "id": "0cb4f3a9-bd24-44f0-bfec-243ed2e1a02a",
       "comment": "",
-      "command": "click",
-      "target": "css=#hnf-btn-postalcodepicker-use > .hnf-btn__inner",
+      "command": "type",
+      "target": "id=hnf-txt-postalcodepicker-postcode",
       "targets": [
-        ["css=#hnf-btn-postalcodepicker-use > .hnf-btn__inner", "css:finder"],
-        ["xpath=//button[@id='hnf-btn-postalcodepicker-use']/span", "xpath:idRelative"],
-        ["xpath=//div[2]/div[3]/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Save')]", "xpath:innerText"]
+        ["id=hnf-txt-postalcodepicker-postcode", "id"],
+        ["css=#hnf-txt-postalcodepicker-postcode", "css:finder"],
+        ["xpath=//input[@id='hnf-txt-postalcodepicker-postcode']", "xpath:attributes"],
+        ["xpath=//div[@id='postalcodepicker-input-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
       ],
-      "value": ""
+      "value": "A1A1A1"
+    }, {
+      "id": "37d3d3b7-47f5-405c-9d62-3914ba064315",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=hnf-txt-postalcodepicker-postcode",
+      "targets": [
+        ["id=hnf-txt-postalcodepicker-postcode", "id"],
+        ["css=#hnf-txt-postalcodepicker-postcode", "css:finder"],
+        ["xpath=//input[@id='hnf-txt-postalcodepicker-postcode']", "xpath:attributes"],
+        ["xpath=//div[@id='postalcodepicker-input-form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "516e53c2-243c-41fd-b3b8-f388d678b852",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.focus-visible .hnf-btn__label",
+      "targets": [
+        ["css=.focus-visible .hnf-btn__label", "css:finder"],
+        ["xpath=//li[@id='hnf-header-postalcodepicker']/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//button/span/span", "xpath:position"]
+      ],
+      "value": "A1A1A1"
+    }, {
+      "id": "e502c95f-3696-4220-a18b-562700bd8506",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store .hnf-btn__label",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store .hnf-btn__label", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span/span", "xpath:position"]
+      ],
+      "value": "Halifax"
     }]
   }, {
     "id": "0f218cf8-e790-428d-92ef-51d0ca92a127",
@@ -97,62 +166,48 @@
         ["xpath=//span[contains(.,'Save')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "393422c0-0dd9-4ac8-9912-45f9ad2595a6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#hnf-txt-postalcodepicker-postcode-invalid > .hnf-form-field__message",
+      "targets": [
+        ["css=#hnf-txt-postalcodepicker-postcode-invalid > .hnf-form-field__message", "css:finder"],
+        ["xpath=//span[@id='hnf-txt-postalcodepicker-postcode-invalid']/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/span[2]", "xpath:position"]
+      ],
+      "value": "The postal code you entered is not valid. Please try again."
     }]
   }, {
     "id": "7dc2a58b-d457-4192-b922-b21860dff9d3",
-    "name": "addingItemToShoppingCart",
+    "name": "addingItemToShoppingCartAndCheckout",
     "commands": [{
-      "id": "9f212a09-2167-4875-ba5e-468eb3a852fc",
+      "id": "598f242e-ccd5-42d7-99aa-2292a3ce9753",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "061eb809-d32b-4177-8b8c-6904de5077a2",
+      "id": "abec70ff-8b9f-4b70-9a91-832dbef0eda4",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1920x1016",
+      "target": "1412x964",
       "targets": [],
       "value": ""
     }, {
-      "id": "5c6cf91d-143c-4dd4-bdb4-a636bc2ca686",
-      "comment": "",
-      "command": "click",
-      "target": "id=onetrust-accept-btn-handler",
-      "targets": [
-        ["id=onetrust-accept-btn-handler", "id"],
-        ["css=#onetrust-accept-btn-handler", "css:finder"],
-        ["xpath=//button[@id='onetrust-accept-btn-handler']", "xpath:attributes"],
-        ["xpath=//div[@id='onetrust-button-group']/div/button[2]", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/button[2]", "xpath:position"],
-        ["xpath=//button[contains(.,'Accept all')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "3d12d3ce-0e90-4e11-a650-5e7963088747",
+      "id": "bb75704e-f355-4ab3-826d-74492864f84c",
       "comment": "",
       "command": "mouseOver",
-      "target": "css=.hero-item .content",
+      "target": "css=.hero .go-shopping",
       "targets": [
-        ["css=.hero-item .content", "css:finder"],
-        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div/a/div[2]", "xpath:idRelative"],
-        ["xpath=//a/div[2]", "xpath:position"]
+        ["css=.hero .go-shopping", "css:finder"],
+        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div[2]/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//section/div[2]/div/div/a/span[2]", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "02724804-b30b-48e9-aa88-deff35b10dd9",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.hero-item .content",
-      "targets": [
-        ["css=.hero-item .content", "css:finder"],
-        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div/a/div[2]", "xpath:idRelative"],
-        ["xpath=//a/div[2]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "b32ba175-9ab0-4620-b583-1fce7732068a",
+      "id": "d3f5cc51-fc87-4cd5-9797-d6737a96c6a3",
       "comment": "",
       "command": "click",
       "target": "css=.hero .go-shopping",
@@ -163,7 +218,126 @@
       ],
       "value": ""
     }, {
-      "id": "bd7e9846-b703-4ba6-9605-619c11f36789",
+      "id": "a5d207f7-3ac1-4eda-af42-c9a6651e2331",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-shopping-cart-icon",
+      "targets": [
+        ["css=.js-shopping-cart-icon", "css:finder"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shopping cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1f1dfce-9f63-4dd3-ab29-1d33e316caab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rec-carousel-slide:nth-child(1) .pip-btn:nth-child(1)",
+      "targets": [
+        ["css=.rec-carousel-slide:nth-child(1) .pip-btn:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='rec-carousel__cart-empty-cart']/div/div/div/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div/div/div/div/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70e9cd71-8d53-4db3-9456-f4e34bfbd371",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb33e936-d618-485a-89c1-b0226ede060c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Halifax')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a40608da-4833-446a-9548-da67d5854a06",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(1) > .hnf-location__store > .hnf-btn__inner", "css:finder"],
+        ["xpath=//li[@id='hnf-header-storepicker']/div/button/span", "xpath:idRelative"],
+        ["xpath=//li[2]/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Halifax')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b47de552-21c7-4413-a752-36808c1ea362",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.cart-ingka-accordion__heading",
+      "targets": [
+        ["css=.cart-ingka-accordion__heading", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//li[@id='cart-coupon']/div/button", "xpath:idRelative"],
+        ["xpath=//div[22]/div/ul/li/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Use a discount code')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4839fe7b-a68b-41fb-b0bc-152a9ebffbe3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cart-ingka-jumbo-btn__inner",
+      "targets": [
+        ["css=.cart-ingka-jumbo-btn__inner", "css:finder"],
+        ["xpath=//main[@id='one-checkout']/main/div/div/div/div[22]/div/div[3]/button/span", "xpath:idRelative"],
+        ["xpath=//div[22]/div/div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Continue to checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b117a05f-b841-4079-8ebe-e42941824556",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.cart-ingka-btn:nth-child(5) .cart-ingka-btn__label",
+      "targets": [
+        ["css=.cart-ingka-btn:nth-child(5) .cart-ingka-btn__label", "css:finder"],
+        ["xpath=//main[@id='one-checkout']/main/div/div/div/div[9]/div[4]/div/div[2]/div/div/button[2]/span/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span/span", "xpath:position"]
+      ],
+      "value": "Continue to guest checkout"
+    }]
+  }, {
+    "id": "a3aa1b91-d540-4af2-970c-e58e2c7753f9",
+    "name": "addingMultipleItemsAndRemoveThenCheckout",
+    "commands": [{
+      "id": "5fdeb8f9-484f-4c1f-906f-f7b8cdb7985a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35f6aed1-0591-4687-86f2-e76de3ae2b54",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1412x964",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3137e0a5-c739-4025-9a01-d2b1373ecd76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hero .go-shopping",
+      "targets": [
+        ["css=.hero .go-shopping", "css:finder"],
+        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div[2]/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//section/div[2]/div/div/a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1856b8c2-ec96-4cc9-8b3b-ef36458bbe0b",
       "comment": "",
       "command": "click",
       "target": "linkText=Products",
@@ -177,21 +351,7 @@
       ],
       "value": ""
     }, {
-      "id": "aa155de4-806c-4ef7-ac7e-a729f9f521c2",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Products",
-      "targets": [
-        ["linkText=Products", "linkText"],
-        ["css=.hnf-header__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Products')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')]", "xpath:href"],
-        ["xpath=//nav/ul/li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Products')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "1ca40722-66e4-456a-9319-0e03bc17a4a5",
+      "id": "e05417d3-e0c2-4c5f-8f3e-10755f872b9d",
       "comment": "",
       "command": "click",
       "target": "linkText=New products",
@@ -205,182 +365,36 @@
       ],
       "value": ""
     }, {
-      "id": "61e6c81f-01c4-4b66-8ab5-af4bbe414d7e",
+      "id": "7ca4fe0c-f709-4cb9-aab8-6feaf4e0f59d",
       "comment": "",
       "command": "click",
       "target": "css=.pub__carousel-slide:nth-child(2) .pip-btn--icon-emphasised",
       "targets": [
         ["css=.pub__carousel-slide:nth-child(2) .pip-btn--icon-emphasised", "css:finder"],
-        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=(//button[@type='button'])[12]", "xpath:attributes"],
         ["xpath=//div[@id='pub__carousel__6a3a84e0-5381-11ed-892a-6b504748d383']/div[2]/div/div/div/div/button", "xpath:idRelative"],
         ["xpath=//div[2]/div/div/div/div/button", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "41a27471-63f9-4974-a414-95abb31af37e",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.pub__carousel-slide:nth-child(2) .pip-aspect-ratio-box:nth-child(2) > .pip-image",
-      "targets": [
-        ["css=.pub__carousel-slide:nth-child(2) .pip-aspect-ratio-box:nth-child(2) > .pip-image", "css:finder"],
-        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/images/products/svarthoe-cushion-cover-multicolor__1177527_ph189208_s5.jpg?f=xxs')]", "xpath:img"],
-        ["xpath=//div[@id='pub__carousel__6a3a84e0-5381-11ed-892a-6b504748d383']/div[2]/div/div/a/div/span[2]/img", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/a/div/span[2]/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "9d8b3056-ac1f-4ef1-8759-2aea5bf35ad5",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.pub__carousel-slide:nth-child(2) .pip-aspect-ratio-box:nth-child(2) > .pip-image",
-      "targets": [
-        ["css=.pub__carousel-slide:nth-child(2) .pip-aspect-ratio-box:nth-child(2) > .pip-image", "css:finder"],
-        ["xpath=//img[contains(@src,'https://www.ikea.com/ca/en/images/products/svarthoe-cushion-cover-multicolor__1177527_ph189208_s5.jpg?f=xxs')]", "xpath:img"],
-        ["xpath=//div[@id='pub__carousel__6a3a84e0-5381-11ed-892a-6b504748d383']/div[2]/div/div/a/div/span[2]/img", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/a/div/span[2]/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "169b13df-789c-453c-b0f8-5846088fe97b",
-      "comment": "",
-      "command": "click",
-      "target": "css=.hnf-btn--plain > .hnf-btn__inner",
-      "targets": [
-        ["css=.hnf-btn--plain > .hnf-btn__inner", "css:finder"],
-        ["xpath=//div[18]/div/div[2]/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Show')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "786e1e0c-0fec-4b10-8aec-f29115048bc8",
+      "id": "42f27976-6371-44f0-b670-9c1c80249811",
       "comment": "",
       "command": "runScript",
-      "target": "window.scrollTo(0,200)",
-      "targets": [],
-      "value": ""
-    }]
-  }, {
-    "id": "a3aa1b91-d540-4af2-970c-e58e2c7753f9",
-    "name": "addingMultipleItemsAndRemoveOne",
-    "commands": [{
-      "id": "dd3dc5ed-f439-437f-9b1b-8a0cba675e80",
-      "comment": "",
-      "command": "open",
-      "target": "/",
+      "target": "window.scrollTo(0,352)",
       "targets": [],
       "value": ""
     }, {
-      "id": "3432279b-c6b2-4e65-961d-9e0480e484f6",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1920x1016",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "259eedc5-2ea0-46b9-8e70-a78744a1e33a",
+      "id": "8d53177e-c7b1-43ab-baed-eadff8026295",
       "comment": "",
       "command": "click",
-      "target": "css=.hero .go-shopping",
+      "target": "css=.hnf-btn__inner--icon-tertiary-inverse",
       "targets": [
-        ["css=.hero .go-shopping", "css:finder"],
-        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div[2]/div/div/a/span[2]", "xpath:idRelative"],
-        ["xpath=//section/div[2]/div/div/a/span[2]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "f38c1f4d-58ec-4e2f-a1ba-c3e818dec7b4",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Products",
-      "targets": [
-        ["linkText=Products", "linkText"],
-        ["css=.hnf-header__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Products')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')]", "xpath:href"],
-        ["xpath=//nav/ul/li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Products')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "03d17b88-17e4-4e85-8ae4-072b737dc384",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=New products",
-      "targets": [
-        ["linkText=New products", "linkText"],
-        ["css=.hnf-menu__nav2__main > .hnf-menu--highlight:nth-child(1) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'New products')]", "xpath:link"],
-        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/new/')])[2]", "xpath:href"],
-        ["xpath=//nav[2]/ul/li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'New products')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "dd6e3905-b068-48e6-b503-2cbe423b46ec",
-      "comment": "",
-      "command": "click",
-      "target": "css=.pub__carousel-slide:nth-child(1) .pip-btn--icon-emphasised",
-      "targets": [
-        ["css=.pub__carousel-slide:nth-child(1) .pip-btn--icon-emphasised", "css:finder"],
-        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
-        ["xpath=//div[@id='pub__carousel__6a3a84e0-5381-11ed-892a-6b504748d383']/div/div/div/div/div/button", "xpath:idRelative"],
-        ["xpath=//div/div/div/div/div/div/div/div/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "cb96c1bf-b331-417e-9840-d97a23436949",
-      "comment": "",
-      "command": "click",
-      "target": "css=.pub__carousel-slide:nth-child(3) .pip-btn--icon-emphasised",
-      "targets": [
-        ["css=.pub__carousel-slide:nth-child(3) .pip-btn--icon-emphasised", "css:finder"],
-        ["xpath=(//button[@type='button'])[14]", "xpath:attributes"],
-        ["xpath=//div[@id='pub__carousel__6a3a84e0-5381-11ed-892a-6b504748d383']/div[3]/div/div/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div/div/div/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "2b8b458b-0c6b-43d7-81a5-a8c8263def1e",
-      "comment": "",
-      "command": "click",
-      "target": "css=.pub__carousel-slide:nth-child(4) .pip-btn--icon-emphasised",
-      "targets": [
-        ["css=.pub__carousel-slide:nth-child(4) .pip-btn--icon-emphasised", "css:finder"],
-        ["xpath=(//button[@type='button'])[17]", "xpath:attributes"],
-        ["xpath=//div[@id='pub__carousel__6a3a84e0-5381-11ed-892a-6b504748d383']/div[4]/div/div/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div/div/div/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "677c1d8c-c525-4127-8313-f1c3d8b0ed0c",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.pip-btn--loading > .pip-btn__inner",
-      "targets": [
-        ["css=.pip-btn--loading > .pip-btn__inner", "css:finder"],
-        ["xpath=//div[@id='pub__carousel__6a3a84e0-5381-11ed-892a-6b504748d383']/div[4]/div/div/div/div/button/span", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div/div/div/button/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3f29a1e7-2e57-48c5-a34c-158874aa8baa",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,2078)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0efb87b0-3dd3-4549-b497-ac76fa1d762a",
-      "comment": "",
-      "command": "click",
-      "target": "css=.hnf-toast--show .hnf-toast__close-btn .hnf-btn__inner",
-      "targets": [
-        ["css=.hnf-toast--show .hnf-toast__close-btn .hnf-btn__inner", "css:finder"],
+        ["css=.hnf-btn__inner--icon-tertiary-inverse", "css:finder"],
         ["xpath=//div[2]/div[2]/button/span", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "0c934fa4-3f7f-4d35-bcdf-105728646240",
+      "id": "5ca515ae-95d5-4793-b6ab-e9109870b45f",
       "comment": "",
       "command": "click",
       "target": "css=.js-shopping-cart-icon",
@@ -390,21 +404,39 @@
       ],
       "value": ""
     }, {
-      "id": "87bbe4a0-5e6e-401b-a671-3498cea2c8c0",
+      "id": "061c9089-9259-42bf-a77a-62c402992e3c",
       "comment": "",
       "command": "click",
-      "target": "linkText=Remove product",
+      "target": "css=.cart-ingka-btn--xsmall > .cart-ingka-btn__inner",
       "targets": [
-        ["linkText=Remove product", "linkText"],
-        ["css=.product_product__pvcUf:nth-child(1) .productControls_remove__\\+MOme > .cart-ingka-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Remove product')]", "xpath:link"],
-        ["xpath=//a[@type='tertiary']", "xpath:attributes"],
-        ["xpath=//main[@id='one-checkout']/main/div/div/div/div[21]/div[7]/div/div/div[2]/div/div[2]/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '#')])[3]", "xpath:href"],
-        ["xpath=//div[2]/div/div[2]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Remove product')]", "xpath:innerText"]
+        ["css=.cart-ingka-btn--xsmall > .cart-ingka-btn__inner", "css:finder"],
+        ["xpath=//main[@id='one-checkout']/main/div/div/div/div[21]/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//div[21]/div[2]/button/span", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "9d97f6fa-6ab3-48ae-9452-685dc095ce70",
+      "comment": "",
+      "command": "click",
+      "target": "css=#cart-ingka-context-menu-actions-2 .cart-ingka-action-list-item__label",
+      "targets": [
+        ["css=#cart-ingka-context-menu-actions-2 .cart-ingka-action-list-item__label", "css:finder"],
+        ["xpath=//li[@id='cart-ingka-context-menu-actions-2']/button/span/span", "xpath:idRelative"],
+        ["xpath=//li[3]/button/span/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "457a4513-d860-4df1-98a4-b1f7485aa55d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.noProducts_header__9wz2x",
+      "targets": [
+        ["css=.noProducts_header__9wz2x", "css:finder"],
+        ["xpath=//main[@id='one-checkout']/main/div/div/div/div[21]/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Your cart is empty')]", "xpath:innerText"]
+      ],
+      "value": "Your cart is empty"
     }]
   }],
   "suites": [{
