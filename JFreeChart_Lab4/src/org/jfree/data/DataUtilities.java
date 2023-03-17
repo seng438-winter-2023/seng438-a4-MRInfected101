@@ -50,6 +50,7 @@ package org.jfree.data;
 
 import java.security.InvalidParameterException;
 import java.util.Arrays;
+import java.util.List;
 import org.jfree.chart.util.ParamChecks;
 import org.jfree.data.general.DatasetUtilities;
 
@@ -128,7 +129,7 @@ public abstract class DataUtilities {
 		double total = 0.0;
 		int rowCount = data.getRowCount();
 		
-		if(rowCount < 1) {
+		if(rowCount < 0) {
 			throw new InvalidParameterException();
 		}
 
@@ -137,7 +138,6 @@ public abstract class DataUtilities {
 				Number n = data.getValue(r, column);
 
 				if (n != null) {
-
 					total += n.doubleValue();
 				}
 			}
@@ -161,19 +161,30 @@ public abstract class DataUtilities {
 	 * @since 1.0.13
 	 */
 	public static double calculateColumnTotal(Values2D data, int column, int[] validRows) {
-		ParamChecks.nullNotPermitted(data, "data");
+    if(data == null) {
+      throw new InvalidParameterException("data cannot be null");
+    }
 		double total = 0.0;
 		int rowCount = data.getRowCount();
-		for (int v = 0; v < validRows.length; v++) {
-			int row = validRows[v];
-			if (row < rowCount) {
-				Number n = data.getValue(row, column);
-				if (n != null) {
-					total += n.doubleValue();
-				}
-			}
-		}
-		return total;
+
+    if(rowCount < 0) {
+      throw new InvalidParameterException("data has invalid row count");
+    }
+
+    try {
+      for (int v = 0; v < validRows.length; v++) {
+        int row = validRows[v];
+        if (row < rowCount) {
+          Number n = data.getValue(row, column);
+          if (n != null) {
+            total += n.doubleValue();
+          }
+        }
+      }
+      return total;
+    } catch(Exception e) {
+      throw new InvalidParameterException("data cannot be accessed");
+    }
 	}
 
 	/**
@@ -185,16 +196,28 @@ public abstract class DataUtilities {
 	 * @return The total of the values in the specified row.
 	 */
 	public static double calculateRowTotal(Values2D data, int row) {
-		ParamChecks.nullNotPermitted(data, "data");
-		double total = 0.0;
-		int columnCount = data.getColumnCount();
-		for (int c = 0; c < columnCount; c++) {
-			Number n = data.getValue(row, c);
-			if (n != null) {
-				total += n.doubleValue();
-			}
-		}
-		return total;
+    if(data == null) {
+      throw new InvalidParameterException("data cannot be null");
+    }
+
+    double total = 0.0;
+    int columnCount = data.getColumnCount();
+
+    if(columnCount < 0 ) {
+      throw new InvalidParameterException("row indices start at 0");
+    }
+
+    try {
+      for (int c = 0; c < columnCount; c++) {
+        Number n = data.getValue(row, c);
+        if (n != null) {
+          total += n.doubleValue();
+        }
+      }
+      return total;
+    } catch(Exception e) {
+      throw new InvalidParameterException("cannot access data");
+    }
 	}
 
 	/**
@@ -210,85 +233,115 @@ public abstract class DataUtilities {
 	 * @since 1.0.13
 	 */
 	public static double calculateRowTotal(Values2D data, int row, int[] validCols) {
-		ParamChecks.nullNotPermitted(data, "data");
+    if(data == null) {
+      throw new InvalidParameterException("data cannot be null");
+    }
+
 		double total = 0.0;
 		int colCount = data.getColumnCount();
-		for (int v = 0; v < validCols.length; v++) {
-			int col = validCols[v];
-			if (col < colCount) {
-				Number n = data.getValue(row, col);
-				if (n != null) {
-					total += n.doubleValue();
-				}
-			}
-		}
-		return total;
+
+    if(colCount < 0 ) {
+      throw new InvalidParameterException("row indices start at 0");
+    }
+
+    try {
+      for (int v = 0; v < validCols.length; v++) {
+        int col = validCols[v];
+        if (col < colCount) {
+          Number n = data.getValue(row, col);
+          if (n != null) {
+            total += n.doubleValue();
+          }
+        }
+      }
+      return total;
+    } catch(Exception e) {
+      throw new InvalidParameterException("Error accessing data");
+    }
 	}
 
-	/**
-	 * Constructs an array of <code>Number</code> objects from an array of
-	 * <code>double</code> primitives.
-	 *
-	 * @param data the data (<code>null</code> not permitted).
-	 *
-	 * @return An array of <code>Double</code>.
-	 */
-	public static Number[] createNumberArray(double[] data) {
-		ParamChecks.nullNotPermitted(data, "data");
-		Number[] result = new Number[data.length];
-		for (int i = 0; i < data.length; i++) {
-			result[i] = new Double(data[i]);
-		}
-		return result;
-	}
+    /**
+     * Constructs an array of <code>Number</code> objects from an array of
+     * <code>double</code> primitives.
+     *
+     * @param data  the data (<code>null</code> not permitted).
+     *
+     * @return An array of <code>Double</code>.
+     */
+    public static Number[] createNumberArray(double[] data) {
+        if(data == null) {
+            throw new InvalidParameterException("data cannot be null!");
+        }
 
-	/**
-	 * Constructs an array of arrays of <code>Number</code> objects from a
-	 * corresponding structure containing <code>double</code> primitives.
-	 *
-	 * @param data the data (<code>null</code> not permitted).
-	 *
-	 * @return An array of <code>Double</code>.
-	 */
-	public static Number[][] createNumberArray2D(double[][] data) {
-		ParamChecks.nullNotPermitted(data, "data");
-		int l1 = data.length;
-		Number[][] result = new Number[l1][];
-		for (int i = 0; i < l1; i++) {
-			result[i] = createNumberArray(data[i]);
-		}
-		return result;
-	}
+        Number[] result = new Number[data.length];
+        for (int i = 0; i < data.length; i++) {
+            result[i] = new Double(data[i]);
+        }
+        return result;
+    }
 
-	/**
-	 * Returns a {@link KeyedValues} instance that contains the cumulative
-	 * percentage values for the data in another {@link KeyedValues} instance.
-	 * <p>
-	 * The percentages are values between 0.0 and 1.0 (where 1.0 = 100%).
-	 *
-	 * @param data the data (<code>null</code> not permitted).
-	 *
-	 * @return The cumulative percentages.
-	 */
-	public static KeyedValues getCumulativePercentages(KeyedValues data) {
-		ParamChecks.nullNotPermitted(data, "data");
-		DefaultKeyedValues result = new DefaultKeyedValues();
-		double total = 0.0;
-		for (int i = 0; i < data.getItemCount(); i++) {
-			Number v = data.getValue(i);
-			if (v != null) {
-				total = total + v.doubleValue();
-			}
-		}
-		double runningTotal = 0.0;
-		for (int i = 0; i < data.getItemCount(); i++) {
-			Number v = data.getValue(i);
-			if (v != null) {
-				runningTotal = runningTotal + v.doubleValue();
-			}
-			result.addValue(data.getKey(i), new Double(runningTotal / total));
-		}
-		return result;
-	}
+    /**
+     * Constructs an array of arrays of <code>Number</code> objects from a
+     * corresponding structure containing <code>double</code> primitives.
+     *
+     * @param data  the data (<code>null</code> not permitted).
+     *
+     * @return An array of <code>Double</code>.
+     */
+    public static Number[][] createNumberArray2D(double[][] data) {
+        if(data == null) {
+            throw new InvalidParameterException("data cannot be null!");
+        }
 
+        int l1 = data.length;
+        Number[][] result = new Number[l1][];
+        for (int i = 0; i < l1; i++) {
+            result[i] = createNumberArray(data[i]);
+        }
+        return result;
+    }
+
+    /**
+     * Returns a {@link KeyedValues} instance that contains the cumulative
+     * percentage values for the data in another {@link KeyedValues} instance.
+     * <p>
+     * The percentages are values between 0.0 and 1.0 (where 1.0 = 100%).
+     *
+     * @param data  the data (<code>null</code> not permitted).
+     *
+     * @return The cumulative percentages.
+     */
+    public static KeyedValues getCumulativePercentages(KeyedValues data) {
+        if(data == null) {
+            throw new InvalidParameterException("data cannot be null!");
+        }
+
+        int itemCount = data.getItemCount();
+
+        try {
+          DefaultKeyedValues result = new DefaultKeyedValues();
+          double total = 0.0;
+          List keys = data.getKeys();
+          for (int i = 0; i < itemCount; i++) {
+              Number v = data.getValue((int) keys.get(i));
+              if (v == null) {
+                total += 0;
+                continue;
+              }
+              total = total + v.doubleValue();
+          }
+          double runningTotal = 0.0;
+          for (int i = 0; i < itemCount; i++) {
+              Number v = data.getValue((int) keys.get(i));
+              if (v == null) {
+                v = 0.0;
+              }
+              runningTotal = runningTotal + v.doubleValue();
+              result.addValue(data.getKey(i), new Double(runningTotal / total));
+          }
+          return result;
+        } catch (Exception e) {
+            throw new InvalidParameterException("Error when accessing data");
+        }
+    }
 }

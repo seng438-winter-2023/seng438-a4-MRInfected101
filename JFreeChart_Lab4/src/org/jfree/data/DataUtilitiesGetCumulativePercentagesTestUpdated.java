@@ -239,7 +239,7 @@ public class DataUtilitiesGetCumulativePercentagesTestUpdated {
     mockingContext.checking(new Expectations() {
       {
         allowing(values).getItemCount();
-        will(returnValue(-1));
+        will(returnValue(10));
         allowing(values).getKeys();
         will(returnValue(keys));
 
@@ -281,7 +281,7 @@ public class DataUtilitiesGetCumulativePercentagesTestUpdated {
     mockingContext.checking(new Expectations() {
       {
         allowing(values).getItemCount();
-        will(returnValue(-1));
+        will(returnValue(10));
         allowing(values).getKeys();
         will(returnValue(keys));
 
