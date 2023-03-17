@@ -28,10 +28,14 @@ public class DataUtilitiesTest {
 			{
 				one(values).getRowCount();
 				will(returnValue(2));
+        one(values).getValue(-1, 0);
+        will(throwException(new IndexOutOfBoundsException()));
 				one(values).getValue(0, 0);
 				will(returnValue(7.5));
 				one(values).getValue(1, 0);
 				will(returnValue(2.5));
+        one(values).getValue(2, 0);
+        will(throwException(new IndexOutOfBoundsException()));
 			}
 		});
 		// exercise
@@ -50,10 +54,14 @@ public class DataUtilitiesTest {
       {
         one(values).getRowCount();
         will(returnValue(2));
+        one(values).getValue(-1, 0);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0, 0);
         will(returnValue(3.4));
         one(values).getValue(1, 0);
         will(returnValue(null));
+        one(values).getValue(2, 0);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -83,6 +91,8 @@ public class DataUtilitiesTest {
       {
 				one(values).getRowCount();
 				will(returnValue(3));
+        one(values).getValue(-1, 0);
+        will(throwException(new IndexOutOfBoundsException()));
 				one(values).getValue(0, 0);
 				will(returnValue(6.0));
 				one(values).getValue(1, 0);
@@ -111,6 +121,8 @@ public class DataUtilitiesTest {
 			{
 				one(values).getRowCount();
 				will(returnValue(10));
+        one(values).getValue(-1, 0);
+        will(throwException(new IndexOutOfBoundsException()));
 				one(values).getValue(0, 0);
 				will(returnValue(4.5));
 				one(values).getValue(1, 0);
@@ -133,10 +145,14 @@ public class DataUtilitiesTest {
       {
         one(values).getRowCount();
         will(returnValue(-1));
+        one(values).getValue(-1, 0);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(1,0);
         will(returnValue(2.2));
+        one(values).getValue(2, 0);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -154,6 +170,8 @@ public class DataUtilitiesTest {
       {
         one(values).getRowCount();
         will(returnValue(-1));
+        one(values).getValue(-1, 0);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(1,0);
@@ -186,10 +204,14 @@ public class DataUtilitiesTest {
 			{
 				one(values).getRowCount();
 				will(returnValue(2));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
 				one(values).getValue(0, 0);
 				will(returnValue(7.5));
 				one(values).getValue(1, 0);
 				will(returnValue(2.5));
+        one(values).getValue(2, 0);
+        will(throwException(new IndexOutOfBoundsException()));
 			}
 		});
 		// exercise
@@ -208,10 +230,14 @@ public class DataUtilitiesTest {
       {
         one(values).getRowCount();
         will(returnValue(2));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0, 0);
         will(returnValue(3.4));
         one(values).getValue(1, 0);
         will(returnValue(null));
+        one(values).getValue(2, 0);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -239,6 +265,8 @@ public class DataUtilitiesTest {
       {
 				one(values).getRowCount();
 				will(returnValue(3));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
 				one(values).getValue(0, 0);
 				will(returnValue(6.0));
 				one(values).getValue(1, 0);
@@ -276,6 +304,8 @@ public class DataUtilitiesTest {
 			{
 				one(values).getRowCount();
 				will(returnValue(10));
+        one(values).getValue(-1, 0);
+        will(throwException(new IndexOutOfBoundsException()));
 				one(values).getValue(0, 0);
 				will(returnValue(4.5));
 				one(values).getValue(1, 0);
@@ -299,10 +329,14 @@ public class DataUtilitiesTest {
       {
         one(values).getRowCount();
         will(returnValue(-1));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(1,0);
         will(returnValue(2.2));
+        one(values).getValue(0, 2);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -321,11 +355,13 @@ public class DataUtilitiesTest {
       {
         one(values).getRowCount();
         will(returnValue(10));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(1,0);
         will(returnValue(null));
-        one(values).getValue(2, 0);
+        one(values).getValue(2,0);
         will(throwException(new IndexOutOfBoundsException()));
       }
     });
@@ -353,10 +389,14 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(2));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0, 0);
         will(returnValue(3.4));
         one(values).getValue(0, 1);
         will(returnValue(4.1));
+        one(values).getValue(0, 2);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -377,10 +417,14 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(2));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0, 0);
         will(returnValue(3.4));
         one(values).getValue(0, 1);
         will(returnValue(null));
+        one(values).getValue(0,2);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -401,6 +445,8 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(10));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
@@ -424,11 +470,13 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(-1));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
-        one(values).getValue(0,-1);
+        one(values).getValue(0, 2);
         will(throwException(new IndexOutOfBoundsException()));
       }
     });
@@ -447,11 +495,13 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(-1));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(null));
-        one(values).getValue(0,-1);
+        one(values).getValue(0,2);
         will(throwException(new IndexOutOfBoundsException()));
       }
     });
@@ -470,11 +520,15 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(2));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
-        one(values).getValue(10,0);
+        one(values).getValue(0, 2);
+        will(throwException(new IndexOutOfBoundsException()));
+        one(values).getValue(10, 0);
         will(throwException(new IndexOutOfBoundsException()));
       }
     });
@@ -494,6 +548,8 @@ public class DataUtilitiesTest {
         one(values).getColumnCount();
         will(returnValue(10)); // this makes it invalid as there are only 2
                                // columns
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
@@ -529,10 +585,14 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(2));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0, 0);
         will(returnValue(3.4));
         one(values).getValue(0, 1);
         will(returnValue(4.1));
+        one(values).getValue(0, 2);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -554,10 +614,14 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(2));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0, 0);
         will(returnValue(3.4));
         one(values).getValue(0, 1);
         will(returnValue(null));
+        one(values).getValue(0,2);
+        will(throwException(new IndexOutOfBoundsException()));
       }
     });
 
@@ -579,6 +643,8 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(10));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
@@ -603,11 +669,13 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(-1));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
-        one(values).getValue(0,-1);
+        one(values).getValue(0,2);
         will(throwException(new IndexOutOfBoundsException()));
       }
     });
@@ -627,11 +695,13 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(-1));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(null));
-        one(values).getValue(0,-1);
+        one(values).getValue(0,2);
         will(throwException(new IndexOutOfBoundsException()));
       }
     });
@@ -651,10 +721,14 @@ public class DataUtilitiesTest {
       {
         one(values).getColumnCount();
         will(returnValue(2));
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
         will(returnValue(2.2));
+        one(values).getValue(0,2);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(10,0);
         will(throwException(new IndexOutOfBoundsException()));
       }
@@ -676,6 +750,8 @@ public class DataUtilitiesTest {
         one(values).getColumnCount();
         will(returnValue(10)); // this makes it invalid as there are only 2
                                // columns
+        one(values).getValue(0, -1);
+        will(throwException(new IndexOutOfBoundsException()));
         one(values).getValue(0,0);
         will(returnValue(1.1));
         one(values).getValue(0,1);
