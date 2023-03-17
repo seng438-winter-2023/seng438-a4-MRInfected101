@@ -137,7 +137,7 @@
     }]
   }, {
     "id": "72d7e42b-ce76-47a9-b469-0e1b8d4d30cb",
-    "name": "ikea-goto-us",
+    "name": "ikea-goto-lang3",
     "commands": [{
       "id": "d28b0823-397d-4520-9fd6-534ce2563e2d",
       "comment": "",
@@ -210,7 +210,7 @@
     }]
   }, {
     "id": "d7a310e8-9f11-4fa8-879a-99ae265f98e6",
-    "name": "ikea-goto-canada-en",
+    "name": "ikea-goto-lang1",
     "commands": [{
       "id": "eb3c2438-4fdd-40e2-961d-168b664a8241",
       "comment": "",
@@ -292,7 +292,7 @@
       "id": "78c569bf-6129-4e71-b662-0f34da74bbae",
       "comment": "",
       "command": "click",
-      "target": "css=li:nth-child(2) > .option",
+      "target": "css=li:nth-child(1) > .option",
       "targets": [
         ["css=li:nth-child(2) > .option", "css:finder"],
         ["xpath=//div[@id='mountId']/nav/div[2]/div/div[2]/div/div/div/div/ul/li[2]/button", "xpath:idRelative"],
@@ -302,7 +302,7 @@
     }]
   }, {
     "id": "f8d59017-110c-4085-90ab-fdbedb821444",
-    "name": "ikea-goto-canada-fr",
+    "name": "ikea-goto-lang2",
     "commands": [{
       "id": "fb8cceeb-8b7b-4c80-b037-0ccb55e0c2c3",
       "comment": "",
