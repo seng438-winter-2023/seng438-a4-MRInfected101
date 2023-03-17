@@ -338,6 +338,15 @@
         ["xpath=//span/span/span/span", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "b08dd9a6-8b6b-4960-8b43-63fc57566cc8",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.btn--icon-primary .svg-icon",
+      "targets": [
+        ["css=.btn--icon-primary .svg-icon", "css:finder"]
+      ],
+      "value": ""
     }]
   }, {
     "id": "1b28bfaa-4c93-42ad-8370-ce04fd839da5",
@@ -569,6 +578,20 @@
         ["xpath=//body/div/div/div[3]", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "0bcce973-c2f3-44e5-a550-baf481046496",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=regular-signup-form-lastName-label",
+      "targets": [
+        ["id=regular-signup-form-lastName-label", "id"],
+        ["css=#regular-signup-form-lastName-label", "css:finder"],
+        ["xpath=//label[@id='regular-signup-form-lastName-label']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div[6]/div/div/label", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Last name')]", "xpath:innerText"]
+      ],
+      "value": ""
     }]
   }, {
     "id": "7f516c55-0657-4bef-b94f-a8d6e4ce471e",
@@ -688,6 +711,18 @@
         ["xpath=//div[3]/div/div/input", "xpath:position"]
       ],
       "value": "${KEY_ENTER}"
+    }, {
+      "id": "5fb1d27b-c9ba-4615-a897-59f757aa70d2",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//div[@id='root']/main/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Hej and welcome to Your IKEA')]", "xpath:innerText"]
+      ],
+      "value": ""
     }]
   }, {
     "id": "09c7d52e-0525-4752-97b9-25a691f1431f",
@@ -697,13 +732,6 @@
       "comment": "",
       "command": "open",
       "target": "https://www.ikea.com/ca/en/?ref=gwp-start",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d4ae622d-90a7-4906-a1f0-5314b952b967",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "2576x1408",
       "targets": [],
       "value": ""
     }, {
@@ -831,15 +859,15 @@
       ],
       "value": ""
     }, {
-      "id": "1a4a7324-0a3b-48c7-bfde-fbffe528280b",
+      "id": "1eba819c-3799-4d72-9c98-eda77af1f77a",
       "comment": "",
-      "command": "mouseOut",
-      "target": "css=.btn--loading > .btn__inner",
+      "command": "verifyElementPresent",
+      "target": "css=.form-field:nth-child(1) label",
       "targets": [
-        ["css=.btn--loading > .btn__inner", "css:finder"],
-        ["xpath=//div[@id='root']/div/div[3]/div/form/button/span", "xpath:idRelative"],
-        ["xpath=//form/button/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Loading…')]", "xpath:innerText"]
+        ["css=.form-field:nth-child(1) label", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[3]/div/form/div/div/label", "xpath:idRelative"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Email or verified mobile number')]", "xpath:innerText"]
       ],
       "value": ""
     }]
