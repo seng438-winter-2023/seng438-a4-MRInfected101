@@ -4,309 +4,6 @@
   "name": "NicoleIkeaTests",
   "url": "https://www.ikea.com",
   "tests": [{
-    "id": "90448093-0d42-487a-a45d-1fe77c0b9ab3",
-    "name": "SearchForTable",
-    "commands": [{
-      "id": "10e4142f-c522-4ff6-8da8-3595f0547dca",
-      "comment": "",
-      "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "954893fb-f0d5-4acd-a8e9-51b62ba8ba26",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1550x838",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "06b1c9d7-e50d-4f60-977d-298e3d9b7dcc",
-      "comment": "",
-      "command": "click",
-      "target": "css=.svelte-4987es .website-link",
-      "targets": [
-        ["css=.svelte-4987es .website-link", "css:finder"],
-        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div[2]/div/div/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/?ref=gwp-start')])[2]", "xpath:href"],
-        ["xpath=//section/div[2]/div/div/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "e1ea5849-0954-40c1-abf3-3ddabcc51eba",
-      "comment": "",
-      "command": "click",
-      "target": "name=q",
-      "targets": [
-        ["name=q", "name"],
-        ["css=.search-field__input", "css:finder"],
-        ["xpath=//input[@name='q']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "6981fc61-5d54-405d-86ca-92d9a228fb4b",
-      "comment": "",
-      "command": "type",
-      "target": "name=q",
-      "targets": [
-        ["name=q", "name"],
-        ["css=.search-field__input", "css:finder"],
-        ["xpath=//input[@name='q']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "table"
-    }, {
-      "id": "7a687221-d287-4eda-9328-2e54d4879086",
-      "comment": "",
-      "command": "sendKeys",
-      "target": "name=q",
-      "targets": [
-        ["name=q", "name"],
-        ["css=.search-field__input", "css:finder"],
-        ["xpath=//input[@name='q']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "${KEY_ENTER}"
-    }]
-  }, {
-    "id": "6495e091-1e79-4b41-9240-47659a901a25",
-    "name": "FilterSofasByPrice",
-    "commands": [{
-      "id": "c36b733c-7989-4556-b862-d9efb38a83cf",
-      "comment": "",
-      "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "bcb9ed57-c7a4-4b89-894d-4ab7b5b7b239",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1550x838",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1b91de59-2f13-47bd-962d-bcfcb8f941cf",
-      "comment": "",
-      "command": "click",
-      "target": "css=.hero .go-shopping",
-      "targets": [
-        ["css=.hero .go-shopping", "css:finder"],
-        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div[2]/div/div/a/span[2]", "xpath:idRelative"],
-        ["xpath=//section/div[2]/div/div/a/span[2]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "25fac9d9-3419-44f5-b77c-1a9566c03fe9",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.hnf-btn--open-menu > .hnf-btn__inner",
-      "targets": [
-        ["css=.hnf-btn--open-menu > .hnf-btn__inner", "css:finder"],
-        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "3709d34f-8c2a-4885-a065-7dc9b8f22bf4",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.hnf-btn--open-menu > .hnf-btn__inner",
-      "targets": [
-        ["css=.hnf-btn--open-menu > .hnf-btn__inner", "css:finder"],
-        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "51900b3e-132f-4d5c-9768-cbb9f5ad8908",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Products",
-      "targets": [
-        ["linkText=Products", "linkText"],
-        ["css=.hnf-header__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Products')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')]", "xpath:href"],
-        ["xpath=//nav/ul/li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Products')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "ef7ab0fe-7cd5-479c-9f89-9251b1792bd6",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Products",
-      "targets": [
-        ["linkText=Products", "linkText"],
-        ["css=.hnf-header__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Products')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')]", "xpath:href"],
-        ["xpath=//nav/ul/li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Products')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "fdc1e05e-a44a-4d0e-b292-33e0d88648de",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "linkText=Products",
-      "targets": [
-        ["linkText=Products", "linkText"],
-        ["css=.hnf-header__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Products')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')]", "xpath:href"],
-        ["xpath=//nav/ul/li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Products')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "dbfda08c-c753-4e1e-b1b7-a542fdee1c2a",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Trending",
-      "targets": [
-        ["linkText=Trending", "linkText"],
-        ["css=.hnf-menu--highlight:nth-child(5) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Trending')]", "xpath:link"],
-        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/ideas/')])[3]", "xpath:href"],
-        ["xpath=//nav[2]/ul/li[5]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Trending')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "0d69c264-16b4-47a6-b165-5de5ddeee87e",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "linkText=Trending",
-      "targets": [
-        ["linkText=Trending", "linkText"],
-        ["css=.hnf-menu--highlight:nth-child(5) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Trending')]", "xpath:link"],
-        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/ideas/')])[3]", "xpath:href"],
-        ["xpath=//nav[2]/ul/li[5]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Trending')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "abe01512-0fb9-4f82-b7ce-afe19fb2f36a",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=All furniture",
-      "targets": [
-        ["linkText=All furniture", "linkText"],
-        ["css=.hnf-menu__nav2:nth-child(2) > .hnf-menu__nav2__main > li:nth-child(6) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'All furniture')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/all-furniture-fu001/')]", "xpath:href"],
-        ["xpath=//nav[2]/ul/li[6]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'All furniture')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "04cfd9b5-e67d-49f3-826e-4f2acf52243f",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Sofas",
-      "targets": [
-        ["linkText=Sofas", "linkText"],
-        ["css=li:nth-child(6) li:nth-child(2) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Sofas')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/sofas-fu003/')]", "xpath:href"],
-        ["xpath=//li[6]/nav/ul/li[2]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Sofas')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "6e29e753-0d45-4916-a782-948f83d3d693",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Sofas",
-      "targets": [
-        ["linkText=Sofas", "linkText"],
-        ["css=li:nth-child(6) li:nth-child(2) > .hnf-link", "css:finder"],
-        ["xpath=//a[contains(text(),'Sofas')]", "xpath:link"],
-        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/sofas-fu003/')]", "xpath:href"],
-        ["xpath=//li[6]/nav/ul/li[2]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Sofas')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "00423367-7511-4a6b-8f74-a103e21ed0e6",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,84.80000305175781)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6e6e41a8-b5be-41c9-ad8e-cdb213fea488",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,644)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "5b080a02-20ee-4ea5-b882-c2c4e60367a9",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,1913.5999755859375)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8ff75b76-a9d3-4ff1-8299-0b09f8a892b4",
-      "comment": "",
-      "command": "click",
-      "target": "css=.plp-pill:nth-child(1)",
-      "targets": [
-        ["css=.plp-pill:nth-child(1)", "css:finder"],
-        ["xpath=//div[2]/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Sort')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "7699dddb-ad2f-4c7a-8f34-15e5273efa40",
-      "comment": "",
-      "command": "click",
-      "target": "css=.plp-radio-button:nth-child(3) > .plp-radio-button__text",
-      "targets": [
-        ["css=.plp-radio-button:nth-child(3) > .plp-radio-button__text", "css:finder"],
-        ["xpath=//label[2]/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Price: low to high')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "9f454372-4e4d-425d-becc-faec7ef63f67",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.plp-pill--active",
-      "targets": [
-        ["css=.plp-pill--active", "css:finder"],
-        ["xpath=//div[2]/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Sort')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "c4be07d9-ef07-45b8-9571-61e04fe179bc",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.plp-pill--active",
-      "targets": [
-        ["css=.plp-pill--active", "css:finder"],
-        ["xpath=//div[2]/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Sort')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "028c25a0-e23c-434e-a917-9ee8080d7b5a",
-      "comment": "",
-      "command": "click",
-      "target": "css=.plp-pill--active",
-      "targets": [
-        ["css=.plp-pill--active", "css:finder"],
-        ["xpath=//div[2]/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Sort')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }]
-  }, {
     "id": "a24b494d-11d6-4e4a-b8cc-062f20da83a7",
     "name": "FilterSofasByColor",
     "commands": [{
@@ -495,26 +192,33 @@
         ["xpath=//button[contains(.,'Color')]", "xpath:innerText"]
       ],
       "value": ""
+    }, {
+      "id": "bd559c83-37e1-4ab3-979d-e5dcbaa34fa4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.plp-leading-icon > .plp-pill__label",
+      "targets": [],
+      "value": "gray"
     }]
   }, {
-    "id": "0553f44f-68bd-4a6d-bb32-b4b073d28870",
-    "name": "SearchForCloset",
+    "id": "6f334208-882c-40dd-91c8-984c7f72c276",
+    "name": "FilterSofasByColorRed",
     "commands": [{
-      "id": "8e4df917-f2f6-4702-b12f-8baaaa8834c6",
+      "id": "f62972ed-ff71-4246-89c7-81793b3e63b0",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "32f256ba-ff03-4e77-8ae5-1221c462c41f",
+      "id": "6e7ca69f-4c8c-4eaf-9657-3775025605ac",
       "comment": "",
       "command": "setWindowSize",
       "target": "1550x838",
       "targets": [],
       "value": ""
     }, {
-      "id": "1319bc7c-fbb1-40bd-899e-2552c14083db",
+      "id": "d43773a8-e43d-474a-82e0-6fdb32da2ece",
       "comment": "",
       "command": "click",
       "target": "css=.svelte-4987es .website-link",
@@ -526,55 +230,547 @@
       ],
       "value": ""
     }, {
-      "id": "f72e16dd-b7be-4104-be25-1de87a9bfc21",
+      "id": "a47530cd-2e80-4415-a92a-3be681eea698",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-btn--open-menu > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-btn--open-menu > .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa053528-a1eb-4052-ba92-4938c8cf323d",
       "comment": "",
       "command": "click",
-      "target": "name=q",
+      "target": "css=.hnf-btn--open-menu > .hnf-btn__inner",
       "targets": [
+        ["css=.hnf-btn--open-menu > .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c28dade-6f97-4997-a55e-eb45da58651a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-btn--open-menu > .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-btn--open-menu > .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/div/div/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcdd9c66-cc72-49ff-9c49-8282fe50a493",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-menu__nav__main > li:nth-child(2) > .hnf-link",
+      "targets": [
+        ["css=.hnf-menu__nav__main > li:nth-child(2) > .hnf-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Rooms')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/rooms/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/nav/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33d1b2a4-8399-4d19-8fa5-17e0650c0a58",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-menu__nav__main > li:nth-child(2) > .hnf-link",
+      "targets": [
+        ["css=.hnf-menu__nav__main > li:nth-child(2) > .hnf-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Rooms')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/rooms/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/nav/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e9de43d-9772-4bec-a5db-14127873eede",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Gifting",
+      "targets": [
+        ["linkText=Gifting", "linkText"],
+        ["css=li:nth-child(7) > .hnf-menu__nav__main--small", "css:finder"],
+        ["xpath=//a[contains(text(),'Gifting')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/ideas/gift-ideas/')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gifting')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37c2a8e4-39ae-4453-99e3-d90a8d2b80fb",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Gifting",
+      "targets": [
+        ["linkText=Gifting", "linkText"],
+        ["css=li:nth-child(7) > .hnf-menu__nav__main--small", "css:finder"],
+        ["xpath=//a[contains(text(),'Gifting')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/ideas/gift-ideas/')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Gifting')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f4bb390-2ba2-401f-a198-e76f167e0690",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ab9a329-431f-4579-aab6-80dbee3d67ac",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Track and manage my orders",
+      "targets": [
+        ["linkText=Track and manage my orders", "linkText"],
+        ["css=.hnf-menu__nav__aux > li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Track and manage my orders')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/purchases/')]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Track and manage my orders')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2426d7fe-8fea-4426-89c1-561c83040958",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Track and manage my orders",
+      "targets": [
+        ["linkText=Track and manage my orders", "linkText"],
+        ["css=.hnf-menu__nav__aux > li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Track and manage my orders')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/purchases/')]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Track and manage my orders')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "730c039f-23f5-4c5e-a908-0758139a0aa5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Find a location",
+      "targets": [
+        ["linkText=Find a location", "linkText"],
+        ["css=.hnf-menu__nav__aux > li:nth-child(3) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Find a location')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/stores/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find a location')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da3f882f-05c4-4f8e-bf42-4d0dbb34da6f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Find a location",
+      "targets": [
+        ["linkText=Find a location", "linkText"],
+        ["css=.hnf-menu__nav__aux > li:nth-child(3) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Find a location')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/stores/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find a location')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab9fefec-c7ac-49f9-bda7-8c07d4828368",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hnf-menu__nav__main > li:nth-child(1) > .hnf-link",
+      "targets": [
+        ["css=.hnf-menu__nav__main > li:nth-child(1) > .hnf-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Products')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/cat/products-products/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/nav/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0695b071-99d3-4771-af86-33830fbe40c7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=All furniture",
+      "targets": [
+        ["linkText=All furniture", "linkText"],
+        ["css=.hnf-menu__nav2:nth-child(2) > .hnf-menu__nav2__main > li:nth-child(6) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'All furniture')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/all-furniture-fu001/')]", "xpath:href"],
+        ["xpath=//nav[2]/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'All furniture')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8abbbe1-23ff-4423-8edf-dc496fb584da",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sofas",
+      "targets": [
+        ["linkText=Sofas", "linkText"],
+        ["css=li:nth-child(6) li:nth-child(2) > .hnf-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sofas')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://www.ikea.com/ca/en/cat/sofas-fu003/')]", "xpath:href"],
+        ["xpath=//li[6]/nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sofas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a4f421e-75c9-49fc-97ea-9d6c5db2b5b7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.vn-link:nth-child(2) > .vn__nav__title",
+      "targets": [
+        ["css=.vn-link:nth-child(2) > .vn__nav__title", "css:finder"],
+        ["xpath=//a[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Leather & faux leather sofas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22e726db-7aa9-483a-9f17-08f2762915bd",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.vn-link:nth-child(2) > .vn__nav__title",
+      "targets": [
+        ["css=.vn-link:nth-child(2) > .vn__nav__title", "css:finder"],
+        ["xpath=//a[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Leather & faux leather sofas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0baef78-5b8d-4f69-b023-2fd3304cc1a2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.vn-link:nth-child(3) .hnf-image",
+      "targets": [
+        ["css=.vn-link:nth-child(3) .hnf-image", "css:finder"],
+        ["xpath=//img[@alt='Sectionals']", "xpath:img"],
+        ["xpath=//a[3]/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d27abfe0-c8b3-4870-a064-a0daecc59461",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.vn-link:nth-child(3) .hnf-image",
+      "targets": [
+        ["css=.vn-link:nth-child(3) .hnf-image", "css:finder"],
+        ["xpath=//img[@alt='Sectionals']", "xpath:img"],
+        ["xpath=//a[3]/span/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7272880-279d-4d25-bba5-c0dfb065d48e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,12)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f834fb2-16da-4218-b4e6-f8f4737be6d0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,851.2000122070312)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8738d95-7905-44b3-b18a-dfcb5f64c9e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.plp-pill:nth-child(5)",
+      "targets": [
+        ["css=.plp-pill:nth-child(5)", "css:finder"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Color')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a64a8b1-a080-4139-b843-0adf5d0cb9c2",
+      "comment": "",
+      "command": "click",
+      "target": "id=red",
+      "targets": [
+        ["id=red", "id"],
+        ["name=red", "name"],
+        ["css=#red", "css:finder"],
+        ["xpath=//input[@id='red']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0083a306-c3be-47f9-927a-a192c1aa5d43",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1972.75)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92b74e4d-901c-4be7-8313-b8c0f19662ff",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.plp-leading-icon > .plp-pill__label",
+      "targets": [
+        ["css=.plp-leading-icon > .plp-pill__label", "css:finder"],
+        ["xpath=//div[7]/div/div/div[2]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'red')]", "xpath:innerText"]
+      ],
+      "value": "red"
+    }]
+  }, {
+    "id": "8e6a064f-d371-4095-9d32-5b9ea0c1e234",
+    "name": "SearchForTable",
+    "commands": [{
+      "id": "6a8a8e2d-0109-4ca8-ba9d-e9f049cb02e8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36cffce8-5e50-4da2-96dd-85a75672827f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "808x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17defeb7-98a3-4215-ac29-bf205c76b758",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svelte-4987es .website-link",
+      "targets": [
+        ["css=.svelte-4987es .website-link", "css:finder"],
+        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/?ref=gwp-start')])[2]", "xpath:href"],
+        ["xpath=//section/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11596af0-71be-4e94-bb08-5cfc7ee3411e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f67262e4-ad1d-4086-a4d4-1861fb61318d",
+      "comment": "",
+      "command": "click",
+      "target": "id=ikea-search-input",
+      "targets": [
+        ["id=ikea-search-input", "id"],
         ["name=q", "name"],
-        ["css=.search-field__input", "css:finder"],
-        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "0dfdae66-e076-411c-a620-edec8ccba9a7",
+      "id": "a8cd2dbb-5131-4c47-8af9-3dde973b9f94",
       "comment": "",
       "command": "type",
-      "target": "name=q",
+      "target": "id=ikea-search-input",
       "targets": [
+        ["id=ikea-search-input", "id"],
         ["name=q", "name"],
-        ["css=.search-field__input", "css:finder"],
-        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "Closet"
+      "value": "table"
     }, {
-      "id": "7f88d68c-4874-4562-811c-bc9146a8a1c4",
+      "id": "2beac8d3-a0d5-430c-bab1-67444695e57c",
       "comment": "",
-      "command": "sendKeys",
-      "target": "name=q",
+      "command": "click",
+      "target": "id=search-box__searchbutton",
       "targets": [
-        ["name=q", "name"],
-        ["css=.search-field__input", "css:finder"],
-        ["xpath=//input[@name='q']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
+        ["id=search-box__searchbutton", "id"],
+        ["css=#search-box__searchbutton", "css:finder"],
+        ["xpath=//button[@id='search-box__searchbutton']", "xpath:attributes"],
+        ["xpath=//span[3]/div/button", "xpath:position"]
       ],
-      "value": "${KEY_ENTER}"
+      "value": ""
     }, {
-      "id": "c7783097-2608-4d52-82c0-c6516adb1c74",
+      "id": "2284b65b-7241-44bb-bf9c-c23982ce9301",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=search-box__searchbutton",
+      "targets": [
+        ["id=search-box__searchbutton", "id"],
+        ["css=#search-box__searchbutton", "css:finder"],
+        ["xpath=//button[@id='search-box__searchbutton']", "xpath:attributes"],
+        ["xpath=//span[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54a10f5b-930d-4e40-9c10-a68ebad20849",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=search-box__searchbutton",
+      "targets": [
+        ["id=search-box__searchbutton", "id"],
+        ["css=#search-box__searchbutton", "css:finder"],
+        ["xpath=//button[@id='search-box__searchbutton']", "xpath:attributes"],
+        ["xpath=//span[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26706300-1872-48a3-84be-1c4bc1a686c4",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(2) .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(2) .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cab6f3e9-a0f6-480b-a262-008d59196063",
       "comment": "",
       "command": "runScript",
-      "target": "window.scrollTo(0,48.79999923706055)",
+      "target": "window.scrollTo(0,12)",
       "targets": [],
       "value": ""
     }, {
-      "id": "bae37407-4414-43c9-82df-9a7072397018",
+      "id": "cc2ea3aa-ea84-400c-a61f-cc50439b1966",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,299.20001220703125)",
+      "command": "verifyText",
+      "target": "css=.search-summary__heading",
+      "targets": [
+        ["css=.search-summary__heading", "css:finder"],
+        ["xpath=//main[@id='content']/div/div/div/section/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Showing matches for \"table\"')]", "xpath:innerText"]
+      ],
+      "value": "Showing matches for \"table\""
+    }]
+  }, {
+    "id": "82cbf375-6865-46d1-9c9c-5a3d9d170cba",
+    "name": "SearchForCloset",
+    "commands": [{
+      "id": "b72bb193-aa6a-4028-9c20-c0bf39303e3c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
       "targets": [],
       "value": ""
+    }, {
+      "id": "e025eafb-ba9f-46ef-9fce-2eb21aad415b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "808x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e81977fe-ee39-4ab7-83dd-32c13926bda7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svelte-4987es .website-link",
+      "targets": [
+        ["css=.svelte-4987es .website-link", "css:finder"],
+        ["xpath=//div[@id='mountId']/div/main/div/div/div/section/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.ikea.com/ca/en/?ref=gwp-start')])[2]", "xpath:href"],
+        ["xpath=//section/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d0c3d21-12b3-40b1-a99b-6ecd0ff367d5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e7d3582-7ea8-4871-9ad2-2da961e26e83",
+      "comment": "",
+      "command": "click",
+      "target": "id=ikea-search-input",
+      "targets": [
+        ["id=ikea-search-input", "id"],
+        ["name=q", "name"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1d7e3ab-a6f8-43f6-b247-786637b00976",
+      "comment": "",
+      "command": "type",
+      "target": "id=ikea-search-input",
+      "targets": [
+        ["id=ikea-search-input", "id"],
+        ["name=q", "name"],
+        ["css=#ikea-search-input", "css:finder"],
+        ["xpath=//input[@id='ikea-search-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "closet"
+    }, {
+      "id": "0ed33b7f-52c3-457f-bad6-386e4fe5aed1",
+      "comment": "",
+      "command": "click",
+      "target": "id=search-box__searchbutton",
+      "targets": [
+        ["id=search-box__searchbutton", "id"],
+        ["css=#search-box__searchbutton", "css:finder"],
+        ["xpath=//button[@id='search-box__searchbutton']", "xpath:attributes"],
+        ["xpath=//span[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71709988-c060-4eec-acf7-595f38acceae",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(2) .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(2) .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "368c3d60-fd24-448f-b478-18bdb1bb845e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(2) .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(2) .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e08a7875-fdf6-4c0f-859c-38ab29c33d99",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-location__btn-wrapper:nth-child(2) .hnf-btn__inner",
+      "targets": [
+        ["css=.hnf-location__btn-wrapper:nth-child(2) .hnf-btn__inner", "css:finder"],
+        ["xpath=//div[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c15d72bd-30fb-4060-84a8-20954580662e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hnf-message__content__item:nth-child(1) .hnf-message__copy",
+      "targets": [
+        ["css=.hnf-message__content__item:nth-child(1) .hnf-message__copy", "css:finder"],
+        ["xpath=//div[@id='value-proposition-message']/div/div/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'High standards. Lower prices.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d4e222a-318a-441b-b80b-4dcbbf928164",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.search-summary__heading",
+      "targets": [
+        ["css=.search-summary__heading", "css:finder"],
+        ["xpath=//main[@id='content']/div/div/div/section/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Showing matches for \"closet\"')]", "xpath:innerText"]
+      ],
+      "value": "Showing matches for \"closet\""
     }]
   }],
   "suites": [{
@@ -583,7 +779,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["90448093-0d42-487a-a45d-1fe77c0b9ab3"]
+    "tests": []
   }],
   "urls": ["https://www.ikea.com/"],
   "plugins": []
